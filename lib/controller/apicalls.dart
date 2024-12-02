@@ -169,7 +169,7 @@ class ApiCalls extends ChangeNotifier {
           }
         },
       );
-      var response = await http.MultipartRequest('Post', Uri.parse(url))
+      var response = http.MultipartRequest('Post', Uri.parse(url))
         ..files.add(await http.MultipartFile.fromPath(
             "imagefile", flutterFunctions.imageFile!.path,
             contentType: MediaType("image", "jpg")))
@@ -221,7 +221,7 @@ class ApiCalls extends ChangeNotifier {
               content: const Text('Event has created sucessfully'),
               actions: [
                 ElevatedButton(
-                  child: Text('OK'),
+                  child: const Text('OK'),
                   onPressed: () {
                     Navigator.of(context).pop();
                     //Navigator.of(context).pop();
@@ -857,7 +857,7 @@ class ApiCalls extends ChangeNotifier {
           }
         },
       );
-      var response = await http.MultipartRequest('Post', Uri.parse(url))
+      var response = http.MultipartRequest('Post', Uri.parse(url))
         ..files.add(await http.MultipartFile.fromPath(
             "pdffile", flutterFunctions.pdfFilePath!,
             contentType: MediaType("application", "pdf")))
@@ -910,7 +910,7 @@ class ApiCalls extends ChangeNotifier {
           }
         },
       );
-      var response = await http.MultipartRequest('Post', Uri.parse(url))
+      var response = http.MultipartRequest('Post', Uri.parse(url))
         ..files.add(await http.MultipartFile.fromPath(
             "imagefile", flutterFunctions.imageFile!.path,
             contentType: MediaType("image", "jpg")))

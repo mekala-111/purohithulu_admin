@@ -43,13 +43,11 @@ class _LocationState extends State<Location> {
                             : () async {
                                 await value.insertLocation(
                                     context, locationctrl.text.trim());
-                                if (scaffoldKey != null) {
-                                  scaffoldKey.showSnackBar(SnackBar(
-                                    content: Text(value.messages!),
-                                    duration: Duration(seconds: 5),
-                                  ));
-                                }
-                              },
+                                scaffoldKey.showSnackBar(SnackBar(
+                                  content: Text(value.messages!),
+                                  duration: Duration(seconds: 5),
+                                ));
+                                                            },
                       );
               },
             ),

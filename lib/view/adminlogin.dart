@@ -27,22 +27,22 @@ class _MyWidgetState extends State<Adminlogin> {
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(Icons.person, size: 50, color: Colors.blueAccent),
+          const Icon(Icons.person, size: 50, color: Colors.blueAccent),
           Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             elevation: 10,
-            margin: EdgeInsets.all(20),
+            margin: const EdgeInsets.all(20),
             child: Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   child: TextWidget(
                       hintText: 'Please Enter Your controller',
                       controller: controller),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   child: TextWidget(
                     hintText: 'Please Enter Your Password',
                     controller: password,
@@ -70,13 +70,13 @@ class _MyWidgetState extends State<Adminlogin> {
                                   case 401:
                                     scaffoldKey.showSnackBar(SnackBar(
                                       content: Text('${value.messages}'),
-                                      duration: Duration(seconds: 5),
+                                      duration: const Duration(seconds: 5),
                                     ));
                                     break;
                                   case 201:
                                     scaffoldKey.showSnackBar(SnackBar(
                                       content: Text('${value.messages}'),
-                                      duration: Duration(seconds: 5),
+                                      duration: const Duration(seconds: 5),
                                     ));
                                 }
                               });

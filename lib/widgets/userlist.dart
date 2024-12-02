@@ -34,13 +34,13 @@ class _UserListState extends State<UserList> {
               case 400:
                 scaffoldKey.showSnackBar(SnackBar(
                   content: Text('${apiCalls.messages}'),
-                  duration: Duration(seconds: 5),
+                  duration: const Duration(seconds: 5),
                 ));
                 break;
               case 201:
                 scaffoldKey.showSnackBar(SnackBar(
                   content: Text('${apiCalls.messages}'),
-                  duration: Duration(seconds: 5),
+                  duration: const Duration(seconds: 5),
                 ));
             }
           });
@@ -53,7 +53,7 @@ class _UserListState extends State<UserList> {
       width: MediaQuery.of(context).size.width * 1 / 4,
       textOn: "Activated",
       textOff: "Deactivated",
-      textStyle: TextStyle(color: Colors.white, fontSize: 20),
+      textStyle: const TextStyle(color: Colors.white, fontSize: 20),
     );
   }
 }

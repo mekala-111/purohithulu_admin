@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:purohithulu_admin/widgets/button.dart';
-import 'package:purohithulu_admin/widgets/insertcategory.dart';
-import 'package:purohithulu_admin/widgets/text_widget.dart';
-import 'package:purohithulu_admin/controller/fluterr_functions.dart';
-import 'package:image_picker/image_picker.dart';
 
 import '../controller/apicalls.dart';
 import '../widgets/app_drawer.dart';

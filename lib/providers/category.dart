@@ -155,7 +155,7 @@ class Category with ChangeNotifier {
           }
         },
       );
-      var response = await http.MultipartRequest('Post', Uri.parse(url))
+      var response = http.MultipartRequest('Post', Uri.parse(url))
         ..files.add(await http.MultipartFile.fromPath(
             "imagefile", flutterFunctions.imageFile!.path,
             contentType: MediaType("image", "jpg")))

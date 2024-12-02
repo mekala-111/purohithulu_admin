@@ -22,7 +22,9 @@ class TextWidget extends StatelessWidget {
         controller: controller,
         decoration: InputDecoration(
             border: const OutlineInputBorder(), hintText: hintText),
-        validator: (value) {},
+        validator: (value) {
+          return null;
+        },
       ),
     );
   }

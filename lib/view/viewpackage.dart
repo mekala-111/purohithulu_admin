@@ -37,7 +37,7 @@ class _ViewPackageState extends State<ViewPackage> {
                   background: Container(
                     color: Theme.of(context).colorScheme.error,
                     alignment: Alignment.centerRight,
-                    padding: EdgeInsets.only(right: 20),
+                    padding: const EdgeInsets.only(right: 20),
                     margin: const EdgeInsets.symmetric(
                       horizontal: 15,
                       vertical: 4,

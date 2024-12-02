@@ -53,7 +53,7 @@ class _CatogoriesState extends State<Catogories> {
                 return DropdownButton<String>(
                   elevation: 16,
                   isExpanded: true,
-                  hint: Text('please select type of catogory '),
+                  hint: const Text('please select type of catogory '),
                   items: value.categorieModel!.data!.map((v) {
                     return DropdownMenuItem<String>(
                         onTap: () {
@@ -84,18 +84,18 @@ class _CatogoriesState extends State<Catogories> {
             },
             scaffoldMessengerKey: widget.scaffoldMessengerKey,
           ),
-          Divider(
+          const Divider(
             thickness: 2,
           ),
           Consumer<ApiCalls>(
             builder: (context, value, child) {
               //print('this is from consumer is:${value.vehicles}');
               return value.categories == null
-                  ? Text('no data')
+                  ? const Text('no data')
                   : DropdownButton<String>(
                       elevation: 16,
                       isExpanded: true,
-                      hint: Text('please select type of catogory '),
+                      hint: const Text('please select type of catogory '),
                       items: value.categorieModel!.data!.map((v) {
                         return DropdownMenuItem<String>(
                             onTap: () {

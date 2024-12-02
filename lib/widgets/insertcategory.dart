@@ -40,7 +40,7 @@ class InsertCategory extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.all(5.0),
+          padding: const EdgeInsets.all(5.0),
           child: TextWidget(
             controller: catergoryType!,
             hintText: categoryName,
@@ -57,14 +57,14 @@ class InsertCategory extends StatelessWidget {
                     onPressed: () {
                       imageIcon!();
                     },
-                    icon: Icon(Icons.image),
-                    label: Text("Select Category Icon")),
+                    icon: const Icon(Icons.image),
+                    label: const Text("Select Category Icon")),
             flutterFunctions.imageFile != null
                 ? TextButton(
                     onPressed: () {
                       imageIcon!();
                     },
-                    child: Text("Change Icon"))
+                    child: const Text("Change Icon"))
                 : Container(),
             DropdownButton<String>(
               value: context.watch<FlutterFunctions>().selectedValue,
@@ -84,7 +84,7 @@ class InsertCategory extends StatelessWidget {
         Consumer<ApiCalls>(
           builder: (context, value, child) {
             return value.isloading
-                ? CircularProgressIndicator()
+                ? const CircularProgressIndicator()
                 : Button(
                     onTap: () async {
                       await value
@@ -92,7 +92,7 @@ class InsertCategory extends StatelessWidget {
                               newparentid, flutterFunctions.selectedValue)
                           .then((value) => scaffoldKey.showSnackBar(SnackBar(
                                 content: Text('${apicalls.messages}'),
-                                duration: Duration(seconds: 5),
+                                duration: const Duration(seconds: 5),
                               )));
                       Future.delayed(Duration.zero).then((val) {
                         return value.getCatogories(context);

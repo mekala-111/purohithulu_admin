@@ -23,7 +23,7 @@ class Users extends StatefulWidget {
 
 class _UsersState extends State<Users> {
   bool isopen = false;
-  List<TextEditingController> _adhar = [];
+  final List<TextEditingController> _adhar = [];
   TextEditingController searchController = TextEditingController(text: '');
 
   String saveButton = 'Save';
@@ -74,7 +74,7 @@ class _UsersState extends State<Users> {
     return Scaffold(
       appBar: AppBar(
         actions: <Widget>[
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width / 2,
             child: TextField(
               onChanged: (value) {
@@ -85,7 +85,7 @@ class _UsersState extends State<Users> {
               decoration: InputDecoration(
                 hintText: 'Search by mobile number',
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   onPressed: () {},
                 ),
                 border: OutlineInputBorder(
@@ -95,18 +95,18 @@ class _UsersState extends State<Users> {
                 filled: true,
                 fillColor: Colors.white,
                 contentPadding:
-                    EdgeInsets.symmetric(vertical: 4, horizontal: 16),
+                    const EdgeInsets.symmetric(vertical: 4, horizontal: 16),
               ),
             ),
           ),
           PopupMenuButton<String>(
             itemBuilder: (BuildContext context) {
               return [
-                PopupMenuItem(
+                const PopupMenuItem(
                   value: 'u',
                   child: Text('User'),
                 ),
-                PopupMenuItem(
+                const PopupMenuItem(
                   value: 'p',
                   child: Text('Purohith'),
                 ),
@@ -218,12 +218,12 @@ class _UsersState extends State<Users> {
                                   ? ''
                                   : " Place of birth : ${value.userDetails!.data![index].placeofbirth}"),
                               value.isloading == true
-                                  ? CircularProgressIndicator()
+                                  ? const CircularProgressIndicator()
                                   : SizedBox(
                                       height: 200,
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.vertical(
+                                          borderRadius: const BorderRadius.vertical(
                                             top: Radius.circular(8.0),
                                           ),
                                           image: DecorationImage(
@@ -261,7 +261,7 @@ class _UsersState extends State<Users> {
                                               child: Container(
                                                 decoration: BoxDecoration(
                                                   borderRadius:
-                                                      BorderRadius.vertical(
+                                                      const BorderRadius.vertical(
                                                     top: Radius.circular(8.0),
                                                   ),
                                                   image: DecorationImage(
@@ -288,7 +288,7 @@ class _UsersState extends State<Users> {
                               const Divider(),
                               value.userDetails!.data![index].role == 'p'
                                   ? Padding(
-                                      padding: EdgeInsets.all(5),
+                                      padding: const EdgeInsets.all(5),
                                       child: TextWidget(
                                         //initialvalue: value.users![index]['adharno']==null?'pan is required': value.users![index]['panno'],
                                         hintText: 'Please Enter adhar',
@@ -324,7 +324,7 @@ class _UsersState extends State<Users> {
               },
             )
           : Container(
-              child: Center(
+              child: const Center(
               child: Text('No users to display'),
             )),
     );

@@ -92,7 +92,7 @@ class _AddUserState extends State<AddUser> {
 
     return Scrollbar(
       thickness: 4,
-      radius: Radius.circular(4),
+      radius: const Radius.circular(4),
       thumbVisibility: true,
       trackVisibility: true,
       child: SingleChildScrollView(
@@ -106,7 +106,7 @@ class _AddUserState extends State<AddUser> {
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
                       labelText: widget.mobileHint,
-                      labelStyle: TextStyle(color: Colors.grey),
+                      labelStyle: const TextStyle(color: Colors.grey),
                       focusedBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey),
                       ),
@@ -130,7 +130,7 @@ class _AddUserState extends State<AddUser> {
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
                       labelText: widget.userNameHint,
-                      labelStyle: TextStyle(color: Colors.grey),
+                      labelStyle: const TextStyle(color: Colors.grey),
                       focusedBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey),
                       ),
@@ -150,7 +150,7 @@ class _AddUserState extends State<AddUser> {
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
                       labelText: widget.languagesHint,
-                      labelStyle: TextStyle(color: Colors.grey),
+                      labelStyle: const TextStyle(color: Colors.grey),
                       focusedBorder: const OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.grey),
                       ),
@@ -175,7 +175,7 @@ class _AddUserState extends State<AddUser> {
                             .onImageButtonPress(ImageSource.gallery);
                       },
                       icon: const Icon(Icons.image),
-                      label: Text('select adhar image')),
+                      label: const Text('select adhar image')),
               flutterFunctions.imageFileList!.isNotEmpty
                   ? TextButton(
                       onPressed: () {
@@ -221,7 +221,7 @@ class _AddUserState extends State<AddUser> {
                   return DropdownButton<String>(
                     elevation: 16,
                     isExpanded: true,
-                    hint: Text('please select location'),
+                    hint: const Text('please select location'),
                     items: value.location == null
                         ? []
                         : value.location!.data.map((v) {
@@ -260,7 +260,7 @@ class _AddUserState extends State<AddUser> {
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         separatorBuilder: (context, mainindex) {
-                          return Divider(
+                          return const Divider(
                             thickness: 3,
                             color: Colors.yellowAccent,
                           );
@@ -332,7 +332,7 @@ class _AddUserState extends State<AddUser> {
                                                 decoration: InputDecoration(
                                                   hintText:
                                                       "please enter ${value.categorieModel!.data![mainindex].subcat![subindex]['title']} price",
-                                                  labelStyle: TextStyle(
+                                                  labelStyle: const TextStyle(
                                                       color: Colors.grey),
                                                   focusedBorder:
                                                       const OutlineInputBorder(
@@ -383,7 +383,7 @@ class _AddUserState extends State<AddUser> {
                                         hintText:
                                             "please enter ${value.categorieModel!.data![mainindex].title} price",
                                         labelStyle:
-                                            TextStyle(color: Colors.grey),
+                                            const TextStyle(color: Colors.grey),
                                         focusedBorder: const OutlineInputBorder(
                                           borderSide:
                                               BorderSide(color: Colors.grey),
@@ -420,7 +420,7 @@ class _AddUserState extends State<AddUser> {
 
                               scaffoldKey.showSnackBar(SnackBar(
                                 content: Text('${value.messages}'),
-                                duration: Duration(seconds: 5),
+                                duration: const Duration(seconds: 5),
                               ));
                             }
                           },

@@ -65,7 +65,7 @@ class BookingData {
     this.eventName,
     this.purohithName,
     this.username,
-  }) : _originalAmount = amount != null ? amount.toInt() : null;
+  }) : _originalAmount = amount?.toInt();
 
   BookingData.fromJson(Map<String, dynamic> json)
       : id = json['id'] as int?,

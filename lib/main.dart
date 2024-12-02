@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:purohithulu_admin/controller/auth.dart';
 import 'package:purohithulu_admin/controller/fluterr_functions.dart';
-import 'package:purohithulu_admin/model/categories.dart';
 import 'package:purohithulu_admin/providers/category.dart';
 
 import 'package:purohithulu_admin/view/adminlogin.dart';

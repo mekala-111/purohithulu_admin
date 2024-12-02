@@ -64,58 +64,58 @@ class _CreatePackageState extends State<CreatePackage> {
         Provider.of<FlutterFunctions>(context, listen: false);
 
     return Card(
-      margin: EdgeInsets.all(16.0),
+      margin: const EdgeInsets.all(16.0),
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Create Event',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 24.0,
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextFormField(
               controller: widget.price,
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 labelText: widget.amt,
-                border: OutlineInputBorder(),
+                border: const OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextFormField(
               controller: widget.packageName,
               decoration: InputDecoration(
                 labelText: widget.hintPname,
-                border: OutlineInputBorder(),
+                border: const OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextFormField(
               controller: widget.address,
               maxLines: 3,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Address',
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextFormField(
               controller: widget.description,
               maxLines: 5,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Description',
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             TextFormField(
               controller: dateTimeController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Date and Time',
                 border: OutlineInputBorder(),
               ),
@@ -133,13 +133,13 @@ class _CreatePackageState extends State<CreatePackage> {
                 }
               },
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Consumer<ApiCalls>(
               builder: (context, value, child) {
                 return DropdownButton<String>(
                   elevation: 16,
                   isExpanded: true,
-                  hint: Text('please select type of catogory '),
+                  hint: const Text('please select type of catogory '),
                   items: value.categorieModel!.data!.map((v) {
                     return DropdownMenuItem<String>(
                         onTap: () {
@@ -156,7 +156,7 @@ class _CreatePackageState extends State<CreatePackage> {
                 );
               },
             ),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -181,7 +181,7 @@ class _CreatePackageState extends State<CreatePackage> {
                           fontSize: 18,
                         ),
                       ),
-                SizedBox(width: 16.0),
+                const SizedBox(width: 16.0),
                 Expanded(
                   child: Button(
                     buttonname: widget.viewButton,

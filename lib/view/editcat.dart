@@ -23,9 +23,9 @@ class _EditCatState extends State<EditCat> {
   String updateCatButton = "update image";
   final _form = GlobalKey<FormState>();
   var _isInit = true;
-  var _isSubcat = false;
+  final _isSubcat = false;
   //String? cid;
-  var _initValues = {
+  final _initValues = {
     'title': '',
   };
   // var _editedCategory = Data(
@@ -57,7 +57,7 @@ class _EditCatState extends State<EditCat> {
         .updateCatAtributes(id, context, title);
     messages.showSnackBar(SnackBar(
       content: Text(message.messages!),
-      duration: Duration(seconds: 5),
+      duration: const Duration(seconds: 5),
     ));
     //Navigator.of(context).pop();
   }
@@ -104,7 +104,7 @@ class _EditCatState extends State<EditCat> {
         title: Text(categories[0].title!),
         actions: [
           IconButton(
-            icon: Icon(Icons.save),
+            icon: const Icon(Icons.save),
             onPressed: () {
               _saveForm(id.toString(), cat.text.trim(), scaffoldKey);
             },
@@ -124,7 +124,7 @@ class _EditCatState extends State<EditCat> {
                         DropdownButton<String>(
                           elevation: 16,
                           isExpanded: true,
-                          hint: Text('please select sub category'),
+                          hint: const Text('please select sub category'),
                           items: categories[0].subcat!.map((v) {
                             return DropdownMenuItem<String>(
                                 onTap: () {
@@ -155,7 +155,7 @@ class _EditCatState extends State<EditCat> {
                     : TextFormField(
                         controller: cat,
                         //initialValue: _initValues['title'],
-                        decoration: InputDecoration(labelText: 'Change title?'),
+                        decoration: const InputDecoration(labelText: 'Change title?'),
                         textInputAction: TextInputAction.next,
                         validator: (value) {
                           if (value!.isEmpty) {
@@ -196,7 +196,7 @@ class _EditCatState extends State<EditCat> {
                 //           //     directcalling: _editedSubCategory.directcalling);
                 //         },
                 //       ),
-                Row(
+                const Row(
                   children: [],
                 ),
                 flutterFunctions.imageFile != null
@@ -208,14 +208,14 @@ class _EditCatState extends State<EditCat> {
                         onPressed: () {
                           image.onImageButtonPress(ImageSource.gallery);
                         },
-                        icon: Icon(Icons.image),
-                        label: Text("Select Category Icon")),
+                        icon: const Icon(Icons.image),
+                        label: const Text("Select Category Icon")),
                 flutterFunctions.imageFile != null
                     ? TextButton(
                         onPressed: () {
                           image.onImageButtonPress(ImageSource.gallery);
                         },
-                        child: Text("Change Icon"))
+                        child: const Text("Change Icon"))
                     : Container(),
                 Button(
                   buttonname: updateCatButton,
@@ -224,7 +224,7 @@ class _EditCatState extends State<EditCat> {
                         context, subcategory.subcat.toString());
                     scaffoldKey.showSnackBar(SnackBar(
                       content: Text(subcategory.messages!),
-                      duration: Duration(seconds: 5),
+                      duration: const Duration(seconds: 5),
                     ));
                   },
                 )

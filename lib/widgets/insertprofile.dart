@@ -26,7 +26,7 @@ class InsertProfile extends StatelessWidget {
     return Column(
       children: [
         flutterFunctions.imageFileList!.length == 2
-            ? Container(
+            ? SizedBox(
                 width: 30,
                 child: Image.file(
                     File(flutterFunctions.imageFileList![index!].path)))
@@ -34,14 +34,14 @@ class InsertProfile extends StatelessWidget {
                 onPressed: () {
                   imageIcon!();
                 },
-                icon: Icon(Icons.image),
+                icon: const Icon(Icons.image),
                 label: Text(label!)),
         flutterFunctions.imageFileList!.length == 2
             ? TextButton(
                 onPressed: () {
                   imageIcon!();
                 },
-                child: Text("Change Icon"))
+                child: const Text("Change Icon"))
             : Container(),
       ],
     );

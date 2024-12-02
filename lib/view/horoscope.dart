@@ -20,7 +20,7 @@ class _FileUploadScreenState extends State<FileUploadScreen> {
   String? _title;
   String? _selectedUser;
   File? _selectedFile;
-  bool? _isUploading = false;
+  final bool? _isUploading = false;
   TextEditingController searchController = TextEditingController(text: '');
   // replace with actual user list
   @override
@@ -36,7 +36,7 @@ class _FileUploadScreenState extends State<FileUploadScreen> {
       appBar: AppBar(
         title: const Text('Upload Astrology'),
         actions: [
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width / 2,
             child: TextField(
               onChanged: (value) {},
@@ -177,6 +177,8 @@ class _FileUploadScreenState extends State<FileUploadScreen> {
 }
 
 class FileListScreen extends StatelessWidget {
+  const FileListScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

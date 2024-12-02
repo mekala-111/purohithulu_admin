@@ -33,7 +33,7 @@ class InsertAdhar extends StatelessWidget {
           children: [
             Expanded(
                 child: Padding(
-              padding: EdgeInsets.all(5.0),
+              padding: const EdgeInsets.all(5.0),
               child: TextWidget(
                 controller: catergoryType!,
                 hintText: categoryName,

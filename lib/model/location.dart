@@ -18,12 +18,12 @@ class Location {
   }
 
   Map<String, dynamic> toJson() {
-    final _data = <String, dynamic>{};
-    _data['statusCode'] = statusCode;
-    _data['success'] = success;
-    _data['messages'] = messages;
-    _data['data'] = data.map((e) => e.toJson()).toList();
-    return _data;
+    final data = <String, dynamic>{};
+    data['statusCode'] = statusCode;
+    data['success'] = success;
+    data['messages'] = messages;
+    data['data'] = data.map((e) => e.toJson()).toList();
+    return data;
   }
 }
 
@@ -41,9 +41,9 @@ class Data {
   }
 
   Map<String, dynamic> toJson() {
-    final _data = <String, dynamic>{};
-    _data['id'] = id;
-    _data['location'] = location;
-    return _data;
+    final data = <String, dynamic>{};
+    data['id'] = id;
+    data['location'] = location;
+    return data;
   }
 }
